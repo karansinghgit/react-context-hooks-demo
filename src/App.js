@@ -1,10 +1,18 @@
 import React from 'react';
-import './App.css';
+import BookList from './components/BookList';
+import Navbar from './components/Navbar';
+import ThemeToggler from './components/ThemeToggler';
+
+import ThemeContextProvider from './contexts/ThemeContext';
 
 function App() {
   return (
     <div className="App">
-      
+      <ThemeContextProvider>
+        <Navbar />
+        <BookList />
+        <ThemeToggler />
+      </ThemeContextProvider>
     </div>
   );
 }
